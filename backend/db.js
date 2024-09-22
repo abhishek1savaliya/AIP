@@ -10,12 +10,12 @@ const sequelize = new Sequelize(
     {
         host: process.env.DB_HOST,
         port: process.env.DB_PORT,
-        dialect: 'postgres',
+        dialect: process.env.DB_DIALECT,
         dialectOptions: {
             ssl: {
                 require: process.env.SSL_REQUIRE === 'true',
                 rejectUnauthorized: process.env.SSL_REJECT_UNAUTHORIZED === 'true',
-                ca: fs.readFileSync(path.join(__dirname, './ca.pem')),
+                ca: fs.readFileSync(path.join(__dirname, process.env.SSL_CA_PATH)),
             },
         },
     }
