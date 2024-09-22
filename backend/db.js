@@ -15,7 +15,7 @@ const sequelize = new Sequelize(
             ssl: {
                 require: process.env.SSL_REQUIRE === 'true',
                 rejectUnauthorized: process.env.SSL_REJECT_UNAUTHORIZED === 'true',
-                ca: fs.readFileSync(path.join(__dirname, process.env.SSL_CA_PATH)),
+                ca: fs.readFileSync(path.join(__dirname, './ca.pem')),
             },
         },
     }
