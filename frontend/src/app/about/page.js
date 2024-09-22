@@ -4,7 +4,11 @@ import Donation from '../components/donation/page';
 const About = () => {
   return (
     <div className="p-6 bg-cyan-50 min-h-screen flex flex-col items-center">
+      
+     
+
       <h1 className="text-4xl font-bold text-cyan-800 mb-4">About AIP API</h1>
+      <Donation />
       <p className="text-lg text-cyan-700 mb-4">
         <strong>Developed by:</strong> Abhishek Savaliya
       </p>
@@ -39,9 +43,7 @@ const About = () => {
       <p className="text-lg text-cyan-700 mb-6">
         For support or further information, feel free to reach out via email at <Link href="mailto:support@aip.com" className="text-cyan-800 hover:underline">support@aip.com</Link> or visit our Help Center.
       </p>
-      <hr />
 
-      <Donation />
     </div>
   );
 };
