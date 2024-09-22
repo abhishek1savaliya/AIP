@@ -1,5 +1,6 @@
 const express = require('express');
 const maxmind = require('maxmind');
+const cors = require('cors');
 const morgan = require('morgan')
 const path = require('path');
 const app = express();
@@ -30,8 +31,12 @@ Promise.all([
     console.error('Error loading databases:', err);
 });
 
+app.use(cors({
+    origin: "*",
+  }));
 app.use(express.json());
 app.use(morgan('tiny'))
+
 
 connectDb()
 
