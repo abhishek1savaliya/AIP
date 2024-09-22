@@ -1,0 +1,107 @@
+[33mcommit 9cae3b2cb540fa030621c3a5e9a960a6b7eb2051[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sun Sep 22 11:16:17 2024 +0530
+
+    update Git file
+
+[33mcommit 674a4b8799ae3a0be773b36d4dc354527261dcf8[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sun Sep 22 11:14:47 2024 +0530
+
+    update
+
+[33mcommit 800d0bd994192eee6e669df8030e16e0bf1893b3[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sun Sep 22 11:13:06 2024 +0530
+
+    add routes to get contact and data
+
+[33mcommit 8db3d19b958b350550a4e7028c5f0926cb3ef139[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sun Sep 22 11:12:09 2024 +0530
+
+    add routes to get contact and data
+
+[33mcommit 2bb2a7e4c87203ddde8cf5475bae9bc725ad6303[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sun Sep 22 00:35:12 2024 +0530
+
+    add vercel Analytics
+
+[33mcommit dac5e05bae15f9904e54dfee8ae20f34946e8ac8[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sun Sep 22 00:29:16 2024 +0530
+
+    make changes in UI
+
+[33mcommit 941bac5505f71c53c709971115e4fdaaaef05877[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 22:55:49 2024 +0530
+
+    reduce second
+
+[33mcommit 7020f0efbf4ea324db76aa511a0c5e4d458838e2[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 22:49:59 2024 +0530
+
+    update path
+
+[33mcommit 628881eb877629a484ff02633ccf011cffdd97df[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 22:48:21 2024 +0530
+
+    change logic of server activation
+
+[33mcommit 231ee9b4fe5ca6600a83dc8e39b3ea478ff5f7f7[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 22:40:00 2024 +0530
+
+    update Package json
+
+[33mcommit 07d1648347312bd7f4ae742b90806795ef07a6bc[m
+Author: Abhishek Savaliya <114229865+abhishek1savaliya@users.noreply.github.com>
+Date:   Sat Sep 21 22:35:55 2024 +0530
+
+    add morgan to log request
+
+[33mcommit a3b91045be951789e118821057742a8955f0ee74[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 20:27:50 2024 +0530
+
+    updae response coming from API
+
+[33mcommit 11f344b63f7065ad33341de318bb56dc9d211116[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 20:20:19 2024 +0530
+
+    change structure
+
+[33mcommit 7c60d9986c1cc186dc8b9aca313155ef8eb584f3[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 19:28:15 2024 +0530
+
+    update console
+
+[33mcommit a992954c0cba0cbbe2eafb9667d3f67bb6558908[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 19:17:39 2024 +0530
+
+    add login to keep serveralive
+
+[33mcommit 31706c417f6a3d4d30ab920b8a9115b1df859b1c[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 19:08:17 2024 +0530
+
+    add new details
+
+[33mcommit 4a9596c673a0f4c838fb33be4fef1d96d616260f[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 18:48:15 2024 +0530
+
+    add start command
+
+[33mcommit 5a692d285290dad8e9750c84f22e023c9558cb89[m
+Author: abhisheksavaliya555 <abhisheksavaliya555@gmail.com>
+Date:   Sat Sep 21 18:44:39 2024 +0530
+
+    add code
