@@ -8,7 +8,7 @@ const Donation = () => {
 
     const [donorName, setDonorName] = useState('');
     const [donorEmail, setDonorEmail] = useState('');
-    const [emailInputType, setEmailInputType] = useState(''); 
+    const [emailInputType, setEmailInputType] = useState('');
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({ name: '', email: '' });
 
@@ -90,7 +90,7 @@ const Donation = () => {
                     Email Address
                 </label>
                 <input
-                    type={emailInputType} // Change input type based on validation
+                    type="text"
                     id="donorEmail"
                     value={donorEmail}
                     onChange={(e) => setDonorEmail(e.target.value)}
