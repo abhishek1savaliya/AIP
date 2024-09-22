@@ -2,32 +2,44 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
-import { Loader } from 'rsuite';
 
 const Donation = () => {
     const router = useRouter();
 
     const [donorName, setDonorName] = useState('');
     const [donorEmail, setDonorEmail] = useState('');
+    const [emailInputType, setEmailInputType] = useState(''); 
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({ name: '', email: '' });
 
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email validation regex
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setErrors({ name: '', email: '' }); // Reset errors
+        setErrors({ name: '', email: '' });
         let valid = true;
 
-        // Validation
+        // Validate Name
         if (!donorName) {
+            setLoading(false);
             setErrors((prev) => ({ ...prev, name: 'Name cannot be empty.' }));
             valid = false;
         }
+
+        // Validate Email Format
         if (!donorEmail) {
+            setLoading(false);
             setErrors((prev) => ({ ...prev, email: 'Email cannot be empty.' }));
             valid = false;
+        } else if (!emailPattern.test(donorEmail)) {
+            setEmailInputType('text'); // Change input type to text if email format is invalid
+            setErrors((prev) => ({ ...prev, email: 'Enter email in correct format.' }));
+            valid = false;
+        } else {
+            setEmailInputType('email'); // Reset to 'email' type once valid
         }
 
-        if (!valid) return; // Stop submission if invalid
+        if (!valid) return;
 
         setLoading(true);
 
@@ -45,6 +57,7 @@ const Donation = () => {
                 setLoading(false);
             }
         } catch (error) {
+            setLoading(false);
             console.error('Error submitting donation:', error);
             alert('There was an error processing your donation. Please try again later.');
         } finally {
@@ -77,7 +90,7 @@ const Donation = () => {
                     Email Address
                 </label>
                 <input
-                    type="email"
+                    type={emailInputType} // Change input type based on validation
                     id="donorEmail"
                     value={donorEmail}
                     onChange={(e) => setDonorEmail(e.target.value)}
@@ -88,14 +101,15 @@ const Donation = () => {
 
                 <button
                     type="submit"
-                    className="mt-6 w-full bg-cyan-600 text-white font-bold py-3 px-4 rounded-md hover:bg-cyan-700"
+                    className="mt-6 w-full flex justify-center bg-cyan-600 text-white font-bold py-3 px-4 rounded-md hover:bg-cyan-700"
                 >
-                    {loading ? <Loader content="Loading..." size="sm" /> : 'Donate Now'}
+                    {loading ? <div className="spinner"></div> : 'Donate Now'}
                 </button>
             </form>
 
             <p className="mt-4 text-gray-600 text-sm">
-                Thank you for your support! For more information, contact us at <a className="text-cyan-500" href="mailto:support@aip.com">support@aip.com</a>.
+                Thank you for your support! For more information, contact us at{' '}
+                <a className="text-cyan-500" href="mailto:support@aip.com">support@aip.com</a>.
             </p>
         </div>
     );

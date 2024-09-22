@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.spinner {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 3.8px solid;
+    border-color: #e1e1f0;
+    border-right-color: #0e505c;
+    animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+    to {
+        transform: rotate(1turn);
+    }
+}

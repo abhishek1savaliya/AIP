@@ -2,7 +2,6 @@ import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import Navbar from "./components/Navbar/page";
 import Footer from "./components/Footer/page";
-import 'rsuite/dist/rsuite.min.css';
 
 export const metadata = {
   title: "Create Next App",
