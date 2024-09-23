@@ -95,7 +95,7 @@ function keepServerAlive() {
 
     setInterval(() => {
         fetchActivationPatch();
-    }, 10000);
+    }, 780000);
 }
 
 
