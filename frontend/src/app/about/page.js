@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import Donation from '../components/donation/page';
+import DonerList from '../components/donerList/page';
 
 const About = () => {
   return (
     <div className="p-6 bg-cyan-50 min-h-screen flex flex-col items-center">
-      
-     
 
       <h1 className="text-4xl font-bold text-cyan-800 mb-4">About AIP API</h1>
       <Donation />
+
+      <DonerList />
       <p className="text-lg text-cyan-700 mb-4">
         <strong>Developed by:</strong> Abhishek Savaliya
       </p>
