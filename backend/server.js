@@ -98,11 +98,25 @@ function keepServerAlive() {
     }, 780000);
 }
 
-
-
 function isMobile(asn) {
-
-    const mobileProviders = ['T-Mobile', 'Verizon', 'AT&T', 'Vodafone'];
+    const mobileProviders = [
+        // India
+        'Airtel', 'Reliance Jio', 'BSNL', 'Vodafone Idea', 'MTNL',
+        // North America
+        'Verizon', 'AT&T', 'T-Mobile', 'Sprint', 'MetroPCS', 'Cricket Wireless', 'Rogers', 'Bell', 'Telus',
+        // Europe
+        'Vodafone', 'Orange', 'O2', 'EE', 'Telefónica', 'Telenor', 'Telecom Italia', 'Telia', 'Digi', '3',
+        // Asia-Pacific
+        'Telstra', 'Optus', 'Singtel', 'Digicel', 'PLDT', 'Smart Communications', 'Globe Telecom',
+        // Middle East
+        'Etisalat', 'du', 'STC', 'Ooredoo',
+        // Africa
+        'MTN', 'Airtel Africa', 'Vodacom', 'Safaricom', 'Orange',
+        // South America
+        'Claro', 'Movistar', 'TIM', 'Oi', 'Tigo',
+        // Others
+        'Reliance Communications', 'Dish Wireless', 'Boost Mobile', 'FreedomPop', 'Lebara', 'Lycamobile'
+    ];
     return mobileProviders.includes(asn ? asn.autonomous_system_organization : '');
 }
 
