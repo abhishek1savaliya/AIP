@@ -2,6 +2,12 @@ const { Sequelize, DataTypes } = require('sequelize');
 const { sequelize } = require('./db');
 
 const Contact = sequelize.define('Contact', {
+    id: {
+        type: DataTypes.UUID,         
+        defaultValue: DataTypes.UUIDV4, 
+        allowNull: false,
+        primaryKey: true,            
+    },
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -23,10 +29,10 @@ const Contact = sequelize.define('Contact', {
 
 const syncDatabase = async () => {
     try {
-        await Contact.sync();
-        console.log('Contact model synced with the database.');
+        await Contact.sync()
+        console.log('Contact model synced with the database.')
     } catch (error) {
-        console.error('Error syncing Contact model:', error);
+        console.error('Error syncing Contact model:', error)
     }
 };
 

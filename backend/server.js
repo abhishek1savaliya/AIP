@@ -70,7 +70,7 @@ function keepServerAlive() {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            console.log(x++)
+            // console.log(x++)
 
         } catch (error) {
             console.error('Error fetching activation patch:', error);

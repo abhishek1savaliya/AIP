@@ -33,10 +33,13 @@ const contactController = async (req, res) => {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
+    console.log(name, email, message)
+
     try {
         const newContact = await Contact.create({ name, email, message });
         return res.status(201).json({ message: 'Contact created successfully!', contact: newContact });
     } catch (error) {
+        console.log("ERROR message", error)
         console.error('Error creating contact:', error);
         return res.status(500).json({ error: 'An error occurred while creating the contact.' });
     }
@@ -47,7 +50,7 @@ const getAllDoner = async (req, res) => {
     try {
 
         const donations = await Donation.findAll({
-            attributes: ['name', 'createdAt'], 
+            attributes: ['name', 'createdAt'],
         });
 
         res.json({
@@ -65,6 +68,5 @@ const getAllDoner = async (req, res) => {
         });
     }
 };
-
 
 module.exports = { donationController, contactController, getAllDoner };
