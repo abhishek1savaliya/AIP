@@ -1,5 +1,6 @@
 const express = require('express');
 const maxmind = require('maxmind');
+const moment = require('moment');
 const cors = require('cors');
 const morgan = require('morgan')
 const path = require('path');
@@ -33,7 +34,7 @@ Promise.all([
 
 app.use(cors({
     origin: "*",
-  }));
+}));
 app.use(express.json());
 app.use(morgan('tiny'))
 
@@ -62,7 +63,8 @@ app.use((req, res, next) => {
 
 function keepServerAlive() {
     console.log('Keeping the server alive...');
-    let x = 0;
+
+    const serverStartDate = moment();
 
     const fetchActivationPatch = async () => {
         try {
@@ -70,18 +72,32 @@ function keepServerAlive() {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            // console.log(x++)
+            logServerUptime();
 
         } catch (error) {
             console.error('Error fetching activation patch:', error);
         }
     };
 
+    const logServerUptime = () => {
+        const now = moment();
+        const duration = moment.duration(now.diff(serverStartDate));
+
+        const years = duration.years();
+        const months = duration.months();
+        const days = duration.days();
+        const hours = duration.hours();
+        const minutes = duration.minutes();
+        const seconds = duration.seconds();
+
+        console.log(`Server has been running for ${years} year(s), ${months} month(s), ${days} day(s), ${hours} hour(s), ${minutes} minute(s), and ${seconds} second(s)`);
+    };
 
     setInterval(() => {
         fetchActivationPatch();
-    }, 2000);
+    }, 10000);
 }
+
 
 
 function isMobile(asn) {
